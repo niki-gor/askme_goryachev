@@ -1,138 +1,69 @@
+{% extends "base.html" %}
+
 {% load static %}
 
+{% block content %}
 
-<!doctype html>
-<html lang="en" class="h-100">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Main</title>
-    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
-    <link href="{% static "css/style.css" %}" rel="stylesheet">
-</head>
-<body class="d-flex flex-column h-100">
-
-<header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a id="brand" class="navbar-brand" href="{% url "main" %}">wtFAQ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-    <!--    .container>.row>.col-8+.col-4-->
-    <div class="container">
-        <h1>New questions</h1>
+    <h1>New questions</h1>
+    <div class="question">
         <div class="row">
-            <div class="col-8">
-                <div class="question">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="avatar frame-sm">
-                                <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <h3 class="question-title"><a href="{% url "question" %}">Question 1</a></h3>
-                            <!--                            lorem20-->
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                                autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                                veniam. Eaque eveniet harum impedit itaque provident!
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-2">
+                <div class="avatar frame-sm">
+                    <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
                 </div>
-                <div class="question">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="avatar frame-sm">
-                                <img src="{% static "img/avatar-2.jpg" %}" alt=""/>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <h3 class="question-title"><a href="{% url "question" %}">Question 2</a></h3>
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                                autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                                veniam. Eaque eveniet harum impedit itaque provident!
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="question">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="avatar frame-sm">
-                                <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <h3 class="question-title"><a href="{% url "question" %}">Question 1</a></h3>
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                                autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                                veniam. Eaque eveniet harum impedit itaque provident!
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
             </div>
-            <div class="col-4">
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-11">
-                        <h2>Popular tags</h2>
-                        <span class="tag-item fs-3">LOL</span>
-                        <span class="tag-item fs-6">LOLOLO</span>
-                        <span class="tag-item fs-5">LOL</span>
-                        <span class="tag-item fs-3">LOLOLOL</span>
-                        <span class="tag-item fs-4">LOLOL</span>
-                    </div>
+            <div class="col-10">
+                <h3 class="question-title"><a href="{% url "question" 111 %}">Question 1</a></h3>
+                <!--                            lorem20-->
+                <div class="question-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
+                    autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
+                    veniam. Eaque eveniet harum impedit itaque provident!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="question">
+        <div class="row">
+            <div class="col-2">
+                <div class="avatar frame-sm">
+                    <img src="{% static "img/avatar-2.jpg" %}" alt=""/>
+                </div>
+            </div>
+            <div class="col-10">
+                <h3 class="question-title"><a href="{% url "question" 222 %}">Question 2</a></h3>
+                <div class="question-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
+                    autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
+                    veniam. Eaque eveniet harum impedit itaque provident!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="question">
+        <div class="row">
+            <div class="col-2">
+                <div class="avatar frame-sm">
+                    <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
+                </div>
+            </div>
+            <div class="col-10">
+                <h3 class="question-title"><a href="{% url "question" 333 %}">Question 1</a></h3>
+                <div class="question-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
+                    autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
+                    veniam. Eaque eveniet harum impedit itaque provident!
                 </div>
             </div>
         </div>
     </div>
 
-</main>
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
 
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
-    </div>
-</footer>
-
-</body>
-</html>
+{% endblock %}

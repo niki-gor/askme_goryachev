@@ -6,5 +6,5 @@ def index(request):
     return render(request, 'index.html')
 
 
-def question(request):
+def question(request, question_id):
     return render(request, 'question.html')
