@@ -1,12 +1,32 @@
 .container {
-    padding: 60px 15px 0;
+    padding: 30px 15px 0;
+}
+
+/*.avatar {*/
+/*    width: 80px;*/
+/*    height: 80px;*/
+/*    border-radius: 50%;*/
+/*    overflow: hidden;*/
+/*}*/
+
+.frame-sm {
+    width: 80px;
+    height: 80px;
+}
+
+.frame-md {
+    width: 100px;
+    height: 100px;
+}
+
+.frame-lg {
+    width: 120px;
+    height: 120px;
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
     overflow: hidden;
+    border-radius: 50%;
 }
 
 .avatar img {
@@ -15,9 +35,26 @@
     object-fit: cover;
 }
 
+#brand {
+    font-size: 5vh;
+}
+
+header {
+    height: 7vh;
+}
+
+header nav {
+    height: 7vh;
+    background-color: #597da3;
+}
+
 .question {
     border: 2px solid gray;
     border-radius: 6px;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.tag-item {
+    margin: 20px;
 }
