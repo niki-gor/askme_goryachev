@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+QUESTIONS = [
+    {"question_id": question_id} for question_id in range(10)
+]

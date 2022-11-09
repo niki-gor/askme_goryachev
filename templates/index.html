@@ -5,65 +5,11 @@
 {% block content %}
 
     <h1>New questions</h1>
-    <div class="question">
-        <div class="row">
-            <div class="col-2">
-                <div class="avatar frame-sm">
-                    <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
-                </div>
-            </div>
-            <div class="col-10">
-                <h3 class="question-title"><a href="{% url "question" 111 %}">Question 1</a></h3>
-                <!--                            lorem20-->
-                <div class="question-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                    autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                    veniam. Eaque eveniet harum impedit itaque provident!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="question">
-        <div class="row">
-            <div class="col-2">
-                <div class="avatar frame-sm">
-                    <img src="{% static "img/avatar-2.jpg" %}" alt=""/>
-                </div>
-            </div>
-            <div class="col-10">
-                <h3 class="question-title"><a href="{% url "question" 222 %}">Question 2</a></h3>
-                <div class="question-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                    autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                    veniam. Eaque eveniet harum impedit itaque provident!
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="question">
-        <div class="row">
-            <div class="col-2">
-                <div class="avatar frame-sm">
-                    <img src="{% static "img/avatar-1.jpg" %}" alt=""/>
-                </div>
-            </div>
-            <div class="col-10">
-                <h3 class="question-title"><a href="{% url "question" 333 %}">Question 1</a></h3>
-                <div class="question-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                    autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                    veniam. Eaque eveniet harum impedit itaque provident!
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
+    {% for question in questions %}
+        {% include "question_item.html" %}
+    {% endfor %}
+
+    {% include "paginator.html" %}
 
 {% endblock %}

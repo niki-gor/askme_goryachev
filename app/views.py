@@ -1,9 +1,11 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+
+from app.models import QUESTIONS
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {'questions': QUESTIONS}
+    return render(request, 'index.html', context=context)
 
 
 def question(request, question_id):
