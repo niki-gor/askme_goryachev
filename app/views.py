@@ -10,3 +10,7 @@ def index(request):
 
 def question(request, question_id):
     return render(request, 'question.html')
+
+
+def ask(request):
+    return render(request, 'ask.html')
