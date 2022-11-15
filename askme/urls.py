@@ -23,4 +23,5 @@ urlpatterns = [
     path('', views.index, name='main'),
     path('question/<int:question_id>', views.question, name='question'),
     path('ask', views.ask, name='ask'),
+    path('user_settings', views.user_settings, name='user_settings')
 ]
