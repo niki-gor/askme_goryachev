@@ -8,12 +8,10 @@
             </div>
         </div>
         <div class="col-10">
-            <h3 class="question-title"><a href="{% url "question" question.question_id %}">Question {{ question.question_id }}</a></h3>
+            <h3 class="question-title"><a href="{% url "question" question.question_id %}">{{ question.name }}</a></h3>
             <!--                            lorem20-->
             <div class="question-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto
-                autem culpa, cum, dolore doloremque ducimus enim exercitationem libero maiores nemo vel
-                veniam. Eaque eveniet harum impedit itaque provident!
+                {{ question.description }}
             </div>
         </div>
     </div>

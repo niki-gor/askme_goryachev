@@ -1,5 +1,13 @@
 from django.db import models
 
-QUESTIONS = [
-    {"question_id": question_id} for question_id in range(10)
-]
+questions = {
+    question_id: {
+        "question_id": question_id,
+        "name": "Why",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing "
+                       "elit. Accusantium aliquam architecto\
+                autem culpa, cum, dolore doloremque ducimus enim "
+                       "exercitationem libero maiores nemo vel\
+                veniam. Eaque eveniet harum impedit itaque provident!",
+    } for question_id in range(10)
+}
