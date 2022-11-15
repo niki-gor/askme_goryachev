@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <h1>Settings: {{ user.nickname }}</h1>
+    <br>
+
+    <div class="row">
+        <div class="col-2">
+            <label for="login">Login</label>
+        </div>
+        <div class="col-10">
+            <input type="text" id="login" name="login" minlength="4" maxlength="8" size="30" value="
+{{ user.login }}">
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-2">
+            <label for="login">Email</label>
+        </div>
+        <div class="col-10">
+            <input type="text" id="email" name="email" minlength="4" maxlength="8" size="30" value="
+{{ user.email }}">
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-2">
+            <label for="email">NickName</label>
+        </div>
+        <div class="col-10">
+            <input type="text" id="email" name="email" minlength="4" maxlength="8" size="30" value="
+{{ user.nickname }}">
+        </div>
+    </div>
+
+{% endblock %}
