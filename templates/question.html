@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="container-fluid">
+  <div class="media mt-4">{% include 'inc/question_item.html' %}</div>
+  <hr />
+
+  {% for answer in answers.all %} {% include 'inc/answer.html' %} {% endfor %}
+  {% if user.is_authenticated %}
+
+  <br />
+
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      {% for field in form.visible_fields %} {{ field }} {% endfor %}
+      <br />
+      <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+  </form>
+
+  {% endif %}
+</div>
+
+{% endblock %}
